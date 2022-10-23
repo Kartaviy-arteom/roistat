@@ -73,7 +73,7 @@ export default {
 
     props: {
         chiefList: {
-            type: [],
+            type: Array,
             default: () => [],
         },
     },
