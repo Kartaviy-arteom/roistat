@@ -109,13 +109,13 @@ export default {
             return card;
         },
 
-        generateNewEmployeeId(chief) {
+        generateNewEmployeeId(EmployeeChief) {
             let id = String(this.employees.length + 1);
-            if (chief && chief.subordinates) {
-                id = chief.id + String(chief.subordinates.length + 1);
+            if (EmployeeChief && EmployeeChief.subordinates) {
+                id = EmployeeChief.id + String(EmployeeChief.subordinates.length + 1);
             }
-            if (chief && !chief.subordinates) {
-                id = chief.id + '1';
+            if (EmployeeChief && !EmployeeChief.subordinates) {
+                id = EmployeeChief.id + '1';
             }
             return id;
         },
