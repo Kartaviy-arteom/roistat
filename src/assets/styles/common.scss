@@ -12,3 +12,13 @@
     flex-direction: column;
     flex-grow: 1;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .3s steps(4, start);
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}

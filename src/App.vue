@@ -19,11 +19,13 @@
                                        @sort-employees="handleSortEmployees"
                         />
                     </div>
-                    <FormAddEmployee v-if="isEmployeeFormShown"
-                                     :class="$style.form"
-                                     :chief-list="chiefList"
-                                     @save-employee="handleSaveEmployee"
-                    />
+                    <transition name="fade">
+                        <FormAddEmployee v-if="isEmployeeFormShown"
+                                         :class="$style.form"
+                                         :chief-list="chiefList"
+                                         @save-employee="handleSaveEmployee"
+                        />
+                    </transition>
                 </div>
             </div>
         </section>
