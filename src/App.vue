@@ -123,11 +123,7 @@ export default {
         },
 
         handleSortEmployees() {
-            this.employees.forEach(el => {
-                if (el.subordinates && el.subordinates.length) {
-                    this.sortEmployees(el.subordinates);
-                }
-            });
+            this.sortEmployees(this.employees);
 
             updateEmployers(this.employees);
             this.employees = loadEmployers();
